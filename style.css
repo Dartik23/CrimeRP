@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #111111; /* tmavě šedé ohraničení */
+  background-color: #111111; /* tmavě šedá lišta */
   border-bottom: 2px solid #333333; /* ohraničení spodní */
   position: sticky;
   top: 0;
@@ -32,7 +32,7 @@ header {
 }
 
 .logo img {
-  height: 40px; /* zmenšené logo */
+  height: 44px; /* zvětšené o 10 % */
   width: auto;
   margin-right: 20px;
 }
@@ -59,11 +59,17 @@ nav a, .dropbtn {
   padding: 8px 15px;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
+  font-size: 16px;        /* větší písmo */
+  font-weight: 600;       /* tučnější */
+  letter-spacing: 0.5px;
+  border: none;           /* odstraní šedé ohraničení */
+  background: none;       /* odstraní pozadí tlačítka */
+  cursor: pointer;
 }
 
 nav a:hover, .dropbtn:hover {
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: #111111; /* zachová tmavé pozadí */
+  color: #ff0000;            /* text červený při hover */
 }
 
 /* ----------------------------- Dropdown menu ----------------------------- */
@@ -92,6 +98,7 @@ nav a:hover, .dropbtn:hover {
 
 .dropdown-content a:hover {
   background-color: #ff0000;
+  color: #ffffff;
 }
 
 .dropdown.active .dropdown-content {
