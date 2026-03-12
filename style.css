@@ -18,8 +18,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #111111; /* tmavá lišta */
-  border-bottom: 2px solid #333333; /* spodní ohraničení */
+  background-color: #111111;
+  border-bottom: 2px solid #333333;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -32,18 +32,9 @@ header {
 }
 
 .logo img {
-  height: 44px; /* zvětšené o 10 % oproti původním 40px */
+  height: 44px;
   width: auto;
   margin-right: 20px;
-}
-
-/* Textové logo alternativa */
-.logo-text {
-  font-family: 'Orbitron', sans-serif;
-  color: #ff0000;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 
 /* ----------------------------- Navigace ----------------------------- */
@@ -53,25 +44,24 @@ nav {
   gap: 20px;
 }
 
-/* Všechny odkazy v horní liště */
 nav a, .dropbtn {
   color: #ffffff;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
-  font-size: 16px;        /* větší písmo */
-  font-weight: 600;       /* tučné písmo */
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0.5px;
-  border: none;           /* odstraní šedý rámeček */
-  background: none;       /* žádné pozadí */
-  outline: none;          /* odstraní focus outline */
+  border: none;
+  background: none;
+  outline: none;
   cursor: pointer;
 }
 
 nav a:hover, .dropbtn:hover {
-  background-color: #111111; /* zachová tmavou lištu */
-  color: #ff0000;            /* hover efekt červené písmo */
+  background-color: #111111;
+  color: #ff0000;
 }
 
 /* ----------------------------- Dropdown menu ----------------------------- */
@@ -107,14 +97,31 @@ nav a:hover, .dropbtn:hover {
   display: block;
 }
 
+/* ----------------------------- Boxy pravidel ----------------------------- */
+.rule-box {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.rule-box h2 {
+  color: #ff0000;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.rule-box p, .rule-box li {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
 /* ----------------------------- Obsah stránky ----------------------------- */
 .container {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #111111;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 /* ----------------------------- Footer ----------------------------- */
