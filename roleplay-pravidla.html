@@ -6,6 +6,23 @@
   <title>Roleplay Pravidla | CrimeRP</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  // Dropdown toggle
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    drop.addEventListener('click', () => {
+      drop.classList.toggle('active');
+    });
+  });
+
+  // Zavření dropdownu při kliknutí mimo
+  window.addEventListener('click', e => {
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      if (!drop.contains(e.target)) {
+        drop.classList.remove('active');
+      }
+    });
+  });
+</script>
 <body>
 
 <!-- HLAVIČKA / BANNER -->
