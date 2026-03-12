@@ -1,30 +1,52 @@
-/* Reset a základ */
-body {
+/* ----------------------------- Reset a základ ----------------------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #0b0b0b;
-  color: white;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
 }
 
-/* Header / horní lišta */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000; /* černé pozadí */
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ----------------------------- Horní lišta / Header ----------------------------- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #111;
-  border-bottom: 1px solid #222;
+  padding: 10px 40px;
+  background-color: #111111; /* tmavě šedé ohraničení */
+  border-bottom: 2px solid #333333; /* ohraničení spodní */
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-/* Logo */
-.logo img {
-  height: 50px;
+/* ----------------------------- Logo ----------------------------- */
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-/* Navigace */
+.logo img {
+  height: 40px; /* zmenšené logo */
+  width: auto;
+  margin-right: 20px;
+}
+
+/* Alternativa pro textové logo */
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff0000;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ----------------------------- Navigace ----------------------------- */
 nav {
   display: flex;
   align-items: center;
@@ -32,17 +54,19 @@ nav {
 }
 
 nav a, .dropbtn {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  padding: 8px 12px;
-  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover, .dropbtn:hover {
-  color: #ff0000;
+  background-color: #ff0000;
+  color: #ffffff;
 }
 
-/* Dropdown menu */
+/* ----------------------------- Dropdown menu ----------------------------- */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -51,7 +75,7 @@ nav a:hover, .dropbtn:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #111;
+  background-color: #111111;
   min-width: 180px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.4);
   border-radius: 6px;
@@ -60,30 +84,48 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropdown-content a {
-  color: white;
+  color: #ffffff;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background: #ff0000;
+  background-color: #ff0000;
 }
 
 .dropdown.active .dropdown-content {
   display: block;
 }
 
-/* Obsah stránky */
+/* ----------------------------- Obsah stránky ----------------------------- */
 .container {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
+  background-color: #111111;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Footer */
+/* ----------------------------- Footer ----------------------------- */
 footer {
   text-align: center;
   padding: 30px;
-  border-top: 1px solid #222;
+  border-top: 2px solid #333333;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888888;
+}
+
+/* ----------------------------- Responsivita ----------------------------- */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+  }
 }
