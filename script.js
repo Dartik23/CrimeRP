@@ -1,18 +1,12 @@
-const dropdown = document.querySelector(".dropdown");
-const button = document.querySelector(".dropbtn");
-
-button.addEventListener("click", function(){
-
-dropdown.classList.toggle("active");
-
+document.querySelectorAll(".dropdown").forEach(dropdown => {
+  const button = dropdown.querySelector(".dropbtn");
+  button.addEventListener("click", function(e){
+    e.stopPropagation(); // zabrání zavření dropdown při kliknutí na button
+    dropdown.classList.toggle("active");
+  });
 });
 
-window.addEventListener("click", function(e){
-
-if (!dropdown.contains(e.target)) {
-
-dropdown.classList.remove("active");
-
-}
-
+// Zavření dropdown při kliknutí mimo
+window.addEventListener("click", function(){
+  document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
 });
