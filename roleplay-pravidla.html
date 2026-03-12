@@ -5,55 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roleplay Pravidla | CrimeRP</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Dropdown funkce
+    document.addEventListener("DOMContentLoaded", function() {
+      const dropdowns = document.querySelectorAll(".dropdown");
+      dropdowns.forEach(drop => {
+        drop.querySelector(".dropbtn").addEventListener("click", () => {
+          drop.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 </head>
-<script>
-  // Dropdown toggle
-  document.querySelectorAll('.dropdown').forEach(drop => {
-    drop.addEventListener('click', () => {
-      drop.classList.toggle('active');
-    });
-  });
-
-  // Zavření dropdownu při kliknutí mimo
-  window.addEventListener('click', e => {
-    document.querySelectorAll('.dropdown').forEach(drop => {
-      if (!drop.contains(e.target)) {
-        drop.classList.remove('active');
-      }
-    });
-  });
-</script>
 <body>
 
-<!-- HLAVIČKA / BANNER -->
 <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="CrimeRP Logo">
-      </a>
+  <div class="logo">
+    <img src="assets/logo.png" alt="CrimeRP Logo">
+  </div>
+  <nav>
+    <a href="index.html">Domů</a>
+    <div class="dropdown">
+      <button class="dropbtn">Pravidla ▼</button>
+      <div class="dropdown-content">
+        <a href="komunitni-pravidla.html">Komunitní pravidla</a>
+        <a href="roleplay-pravidla.html">Roleplay pravidla</a>
+        <a href="ilegal-pravidla.html">Ilegální pravidla</a>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Domů</a></li>
-      <li class="dropdown">
-        <a href="#">Pravidla ▼</a>
-        <ul class="dropdown-menu">
-          <li><a href="komunitni-pravidla.html">Komunitní pravidla</a></li>
-          <li><a href="roleplay-pravidla.html">Roleplay pravidla</a></li>
-          <li><a href="illegal-pravidla.html">Ilegal pravidla</a></li>
-        </ul>
-      </li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="https://discord.gg/TVOJDISCORD">Discord</a></li>
-    </ul>
+    <a href="faq.html">FAQ</a>
+    <a href="https://discord.gg/YOUR_DISCORD_LINK" target="_blank">Discord</a>
   </nav>
 </header>
-   
 
-<!-- HLAVNÍ OBSAH -->
-<main class="content">
-  <h1>Roleplay Pravidla</h1>
+<div class="container">
 
+  <!-- ------------------------- RP / OOC / IC ------------------------- -->
   <div class="rule-box">
     <h2>RP │ ROLEPLAY</h2>
     <p>Roleplay je hraní postavy s fiktivním příběhem (lorem). Kdy se snažíme co nejvíce vžít do role a zůstat v charakteru, neboli do jisté míry simulujeme reálný život.</p>
@@ -66,349 +53,95 @@
 
   <div class="rule-box">
     <h2>IC │ IN CHARACTER</h2>
-    <p>Jednání IC, neboli vše v rámci RP. Výměna informací mezi postavami, v rámci
+    <p>Jednání IC, neboli vše v rámci RP. Výměna informací mezi postavami, v rámci RP.</p>
+  </div>
 
-<link rel="stylesheet" href="style.css">
+  <!-- ------------------------- Me/Do/Try ------------------------- -->
+  <div class="rule-box">
+    <h2>/ME</h2>
+    <p>Nahrazuje animace, které se nedají vyjádřit prostřednictvím herní mechaniky. Do commandů a /me je zakázáno psát své myšlenky a pocity.</p>
+    <ul>
+      <li>„/me vytahuje z kapsy doklady a podává je“</li>
+      <li>„/me otevírá kufr auta a vytahuje kufr“</li>
+      <li>„/me přátelsky mu poklepává po rameni“</li>
+    </ul>
+  </div>
 
-<style>
+  <div class="rule-box">
+    <h2>/DO</h2>
+    <p>Slouží k popisu vykonání činnosti s očekáváním reakce nějakého hráče</p>
+    <ul>
+      <li>„/me prohledává sklad“ „/do Co našel?“</li>
+      <li>odpověď druhého hráče … „/do našel sekeru, pistol“</li>
+    </ul>
+    <p>- v /do je přísně zakázáno lhát, psát pocity/myšlenky nebo psát /do za někoho jiného</p>
+  </div>
 
-body{
-background:#0f0f0f;
-color:#eaeaea;
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-}
+  <div class="rule-box">
+    <h2>/TRY</h2>
+    <p>Náhodné vygenerování ANO / NE. Slouží k rozvinutí RP situace nikoliv k zvýhodnění hráče.</p>
+    <ul>
+      <li>Zakázáno používat při rozhodování zranění postav, pokud není přítomno žádné EMS.</li>
+      <li>Zakázáno používat v rámci Passive RP.</li>
+    </ul>
+  </div>
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
+  <!-- ------------------------- Mixing / Metagaming ------------------------- -->
+  <div class="rule-box">
+    <h2>MIXING</h2>
+    <p>Používání OOC informací v IC (např. "volám světlušku" - píšu report, "koukni na lísteček" - podívej se na OOC chat, "jdu do plačkárny" - jdu do čekárny).</p>
+    <p>Za mixing se považují různé nadávky a oslovení v rámci interakce s hráči absolutně vybočující z loru postavy, frakce či skupiny.</p>
+  </div>
 
-h1{
-text-align:center;
-margin-bottom:40px;
-}
+  <div class="rule-box">
+    <h2>METAGAMING</h2>
+    <p>Využití informací, které se dozvíte OOC ve hře.</p>
+    <ul>
+      <li>Příklady: stream sniping, získávání informací z OOC kanálů apod.</li>
+      <li>Nabádání k metagamingu je zakázáno.</li>
+    </ul>
+  </div>
 
-.rule-box{
-background:#161616;
-border:1px solid #2a2a2a;
-border-radius:8px;
-padding:25px;
-margin-bottom:25px;
-}
+  <!-- ------------------------- Lore postavy ------------------------- -->
+  <div class="rule-box">
+    <h2>LORE POSTAVY</h2>
+    <p>Každá postava v RP představuje smyšlenou osobu, která má na začátku pevně daný lore a vyvíjí na základě toho, co se jí v životě (v RP) stane.</p>
+    <p>Je třeba klást důraz na držení se loru, postavení a seriozitu postav. Využívání animací musí být adekvátní k loru postavy.</p>
+  </div>
 
-.rule-box h2{
-color:#e33434;
-margin-top:0;
-}
+  <!-- ------------------------- Non-RP injuries / Driving / PK ------------------------- -->
+  <div class="rule-box">
+    <h2>NON-RP INJURIES</h2>
+    <p>Při každé situaci kdy se vaše postava IC zraní je potřeba zaRPit adekvátní zranění…</p>
+    <!-- zkráceno pro ukázku, vše vložit podle tvého textu -->
+  </div>
 
-.rule-box ul{
-margin-top:10px;
-padding-left:20px;
-}
-
-.rule-box li{
-margin-bottom:6px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>Roleplay pravidla</h1>
-
-
-<div class="rule-box">
-
-<h2>RP │ ROLEPLAY</h2>
-
-<p>
-Roleplay je hraní postavy s fiktivním příběhem (lorem). Hráč se snaží co nejvíce vžít do role a zůstat v charakteru. Do určité míry simulujeme reálný život.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>OOC │ OUT OF CHARACTER</h2>
-
-<p>
-Jednání OOC znamená vystoupení z herní role. Jedná se o komunikaci mimo postavu – tedy jako hráč, nikoliv jako vaše postava.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>IC │ IN CHARACTER</h2>
-
-<p>
-Veškerá komunikace a interakce, které probíhají mezi postavami v rámci RP.
-</p>
+  <!-- ------------------------- Frakce ------------------------- -->
+  <div class="rule-box">
+    <h2>FRAKCE</h2>
+    <p>= Seskupení hráčů se stejným herním cílem.</p>
+    <p>(Např. firma, klan, klub, provozovna služeb, skupina provozující nelegální činnosti apod.)</p>
+    <p>O frakci si lze zažádat formou ticketu.</p>
+    <p>Ticket podává potencionální vůdce frakce.</p>
+    <p>Potřebné informace:</p>
+    <ol>
+      <li>Název frakce</li>
+      <li>Typ frakce (Legální/Neutrální/Nelegální)</li>
+      <li>Věk žadatele</li>
+      <li>Počet lidí do začátku</li>
+      <li>Lore frakce (historie, popis, zaměření, hierarchie, cíl)</li>
+      <li>Lore postavy žadatele</li>
+      <li>Seznam členů do začátku</li>
+    </ol>
+    <p>Vedení frakce po založení musí zaslat IC informace do Discord ticketu…</p>
+    <!-- pokračuj se Strike systém, pravidla státních složek -->
+  </div>
 
 </div>
 
-
-<div class="rule-box">
-
-<h2>/ME</h2>
-
-<p>
-Slouží k popisu akcí, které nelze provést pomocí herní mechaniky.
-Do /me je zakázáno psát myšlenky nebo pocity.
-</p>
-
-<ul>
-<li>/me vytahuje z kapsy doklady a podává je</li>
-<li>/me otevírá kufr auta a vytahuje kufr</li>
-<li>/me přátelsky mu poklepává po rameni</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>/DO</h2>
-
-<p>
-Používá se k popisu stavu nebo výsledku akce s očekáváním reakce jiného hráče.
-</p>
-
-<ul>
-<li>/me prohledává sklad</li>
-<li>/do Co našel?</li>
-<li>/do našel sekeru a pistoli</li>
-</ul>
-
-<p><strong>V /do je zakázáno:</strong></p>
-
-<ul>
-<li>lhát</li>
-<li>psát myšlenky nebo pocity</li>
-<li>psát /do za jiného hráče</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>/TRY</h2>
-
-<p>
-Náhodně generuje výsledek ANO / NE. Slouží k rozvinutí RP situace.
-</p>
-
-<p><strong>Zakázáno:</strong></p>
-
-<ul>
-<li>používat při rozhodování zranění postavy bez EMS</li>
-<li>používat v Passive RP</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>MIXING</h2>
-
-<p>
-Používání OOC informací v IC komunikaci.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>METAGAMING</h2>
-
-<p>
-Využívání informací získaných mimo RP ve hře.
-Patří sem například stream sniping nebo informace z Discordu.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>LORE POSTAVY</h2>
-
-<ul>
-<li>Každá postava má vlastní příběh.</li>
-<li>Hráč musí dodržovat charakter postavy.</li>
-<li>Animace musí odpovídat charakteru.</li>
-<li>Zakázána jsou jména známých osobností.</li>
-<li>Zakázána jsou CZ/SK jména.</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>MULTICHARAKTER</h2>
-
-<ul>
-<li>Každý hráč má dvě postavy.</li>
-<li>Další postava pouze se schválením AT.</li>
-<li>Zákaz střetu zájmů mezi postavami.</li>
-<li>Jedna postava nesmí být ve více státních složkách.</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>NON-RP INJURIES</h2>
-
-<p>
-Každé zranění musí být adekvátně odroleplayováno.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>NON-RP DRIVING</h2>
-
-<p>
-Nereálné řízení vozidla nebo jízda v nevhodném terénu.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>PK │ PLAYER KILL</h2>
-
-<p>
-Postava utrpěla zranění a musí být ošetřena EMS.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>CK │ CHARACTER KILL</h2>
-
-<p>
-Definitivní smrt postavy. Musí být schválena Admin Teamem.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>FEAR RP</h2>
-
-<p>
-Postava musí mít strach o svůj život.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>NVL │ NOT VALUING LIFE</h2>
-
-<p>
-Nevážení si vlastního života nebo života ostatních.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>POWERGAMING</h2>
-
-<p>
-Nereálné úkony, které nejsou možné v reálném světě.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>KOS / RDM / VDM</h2>
-
-<ul>
-<li>KOS – zabití bez interakce</li>
-<li>RDM – náhodné zabíjení</li>
-<li>VDM – zabíjení vozidlem</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>COMBAT LOG</h2>
-
-<p>
-Odpojení z RP situace je zakázáno.
-</p>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>STRIKE SYSTÉM</h2>
-
-<ul>
-<li>1 Strike – upozornění</li>
-<li>2 Striky – omezení frakce nebo hráče</li>
-<li>3 Striky – odebrání frakce / ban</li>
-</ul>
-
-</div>
-
-
-<div class="rule-box">
-
-<h2>PRAVIDLA STÁTNÍCH SLOŽEK</h2>
-
-<ul>
-
-<li>Státní složky musí dodržovat maximální úroveň RP.</li>
-
-<li>Korupce je zakázána bez schválení Admin Teamu.</li>
-
-<li>Je zakázáno zneužívat pravomoci státní složky.</li>
-
-<li>Je zakázáno bezdůvodné zatýkání hráčů.</li>
-
-<li>Veškeré zásahy musí mít RP důvod.</li>
-
-<li>Je zakázáno kempování míst spawnů nebo jobů.</li>
-
-<li>Státní složky musí respektovat pravidla FearRP a NVL.</li>
-
-</ul>
-
-</div>
-
-
-</div>
+<footer>
+  © 2026 CrimeRP. Všechna práva vyhrazena.
+</footer>
 
 </body>
 </html>
