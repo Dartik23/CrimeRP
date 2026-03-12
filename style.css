@@ -18,8 +18,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #111111; /* tmavě šedá lišta */
-  border-bottom: 2px solid #333333; /* ohraničení spodní */
+  background-color: #111111; /* tmavá lišta */
+  border-bottom: 2px solid #333333; /* spodní ohraničení */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -32,12 +32,12 @@ header {
 }
 
 .logo img {
-  height: 44px; /* zvětšené o 10 % */
+  height: 44px; /* zvětšené o 10 % oproti původním 40px */
   width: auto;
   margin-right: 20px;
 }
 
-/* Alternativa pro textové logo */
+/* Textové logo alternativa */
 .logo-text {
   font-family: 'Orbitron', sans-serif;
   color: #ff0000;
@@ -53,6 +53,7 @@ nav {
   gap: 20px;
 }
 
+/* Všechny odkazy v horní liště */
 nav a, .dropbtn {
   color: #ffffff;
   text-decoration: none;
@@ -60,16 +61,17 @@ nav a, .dropbtn {
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
   font-size: 16px;        /* větší písmo */
-  font-weight: 600;       /* tučnější */
+  font-weight: 600;       /* tučné písmo */
   letter-spacing: 0.5px;
-  border: none;           /* odstraní šedé ohraničení */
-  background: none;       /* odstraní pozadí tlačítka */
+  border: none;           /* odstraní šedý rámeček */
+  background: none;       /* žádné pozadí */
+  outline: none;          /* odstraní focus outline */
   cursor: pointer;
 }
 
 nav a:hover, .dropbtn:hover {
-  background-color: #111111; /* zachová tmavé pozadí */
-  color: #ff0000;            /* text červený při hover */
+  background-color: #111111; /* zachová tmavou lištu */
+  color: #ff0000;            /* hover efekt červené písmo */
 }
 
 /* ----------------------------- Dropdown menu ----------------------------- */
