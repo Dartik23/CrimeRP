@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roleplay Pravidla | CrimeRP</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Dropdown funkce
+    document.addEventListener("DOMContentLoaded", function() {
+      const dropdowns = document.querySelectorAll(".dropdown");
+      dropdowns.forEach(drop => {
+        drop.querySelector(".dropbtn").addEventListener("click", () => {
+          drop.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" alt="CrimeRP Logo">
+  </div>
+  <nav>
+    <a href="index.html">Domů</a>
+    <div class="dropdown">
+      <button class="dropbtn">Pravidla ▼</button>
+      <div class="dropdown-content">
+        <a href="komunitni-pravidla.html">Komunitní pravidla</a>
+        <a href="roleplay-pravidla.html">Roleplay pravidla</a>
+        <a href="ilegal-pravidla.html">Ilegální pravidla</a>
+      </div>
+    </div>
+    <a href="faq.html">FAQ</a>
+    <a href="https://discord.gg/aQZbjd9BJu" target="_blank">Discord</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- ------------------------- RP / OOC / IC ------------------------- -->
+  <div class="rule-box">
+    <h2>RP │ ROLEPLAY</h2>
+    <p>Roleplay je hraní postavy s fiktivním příběhem (lorem). Kdy se snažíme co nejvíce vžít do role a zůstat v charakteru, neboli do jisté míry simulujeme reálný život.</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>OOC │ OUT OF CHARACTER</h2>
+    <p>Jednání OOC (Out Of Character) znamená vystoupení z herní role, tedy vše mimo vaši herní postavu — čili jako hráč, nikoli jako vaše postava.</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>IC │ IN CHARACTER</h2>
+    <p>Jednání IC, neboli vše v rámci RP. Výměna informací mezi postavami, v rámci RP.</p>
+  </div>
+
+  <!-- ------------------------- Me/Do/Try ------------------------- -->
+  <div class="rule-box">
+    <h2>/ME</h2>
+    <p>Nahrazuje animace, které se nedají vyjádřit prostřednictvím herní mechaniky. Do commandů a /me je zakázáno psát své myšlenky a pocity.</p>
+    <ul>
+      <li>„/me vytahuje z kapsy doklady a podává je“</li>
+      <li>„/me otevírá kufr auta a vytahuje kufr“</li>
+      <li>„/me přátelsky mu poklepává po rameni“</li>
+    </ul>
+  </div>
+
+  <div class="rule-box">
+    <h2>/DO</h2>
+    <p>Slouží k popisu vykonání činnosti s očekáváním reakce nějakého hráče</p>
+    <ul>
+      <li>„/me prohledává sklad“ „/do Co našel?“</li>
+      <li>odpověď druhého hráče … „/do našel sekeru, pistol“</li>
+    </ul>
+    <p>- v /do je přísně zakázáno lhát, psát pocity/myšlenky nebo psát /do za někoho jiného</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>/TRY</h2>
+    <p>Náhodné vygenerování ANO / NE. Slouží k rozvinutí RP situace nikoliv k zvýhodnění hráče.</p>
+    <ul>
+      <li>Zakázáno používat při rozhodování zranění postav, pokud není přítomno žádné EMS.</li>
+      <li>Zakázáno používat v rámci Passive RP.</li>
+    </ul>
+  </div>
+
+  <!-- ------------------------- Mixing / Metagaming ------------------------- -->
+  <div class="rule-box">
+    <h2>MIXING</h2>
+    <p>Používání OOC informací v IC (např. "volám světlušku" - píšu report, "koukni na lísteček" - podívej se na OOC chat, "jdu do plačkárny" - jdu do čekárny).</p>
+    <p>Za mixing se považují různé nadávky a oslovení v rámci interakce s hráči absolutně vybočující z loru postavy, frakce či skupiny.</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>METAGAMING</h2>
+    <p>Využití informací, které se dozvíte OOC ve hře.</p>
+    <ul>
+      <li>Příklady: stream sniping, získávání informací z OOC kanálů apod.</li>
+      <li>Nabádání k metagamingu je zakázáno.</li>
+    </ul>
+  </div>
+
+  <!-- ------------------------- Lore postavy ------------------------- -->
+  <div class="rule-box">
+    <h2>LORE POSTAVY</h2>
+    <p>Každá postava v RP představuje smyšlenou osobu, která má na začátku pevně daný lore a vyvíjí na základě toho, co se jí v životě (v RP) stane.</p>
+    <p>Je třeba klást důraz na držení se loru, postavení a seriozitu postav. Využívání animací musí být adekvátní k loru postavy.</p>
+  </div>
+
+  <!-- ------------------------- Non-RP injuries / Driving / PK ------------------------- -->
+  <div class="rule-box">
+    <h2>NON-RP INJURIES</h2>
+	<p>Při každé situaci kdy se vaše postava IC zraní je potřeba zaRPit adekvátní zranění.</p>
+<p>-Lehká zranění jako odřeniny, škrábance či mělké řezné rány si je schopen hráč ošetřit sám.</p>
+<p>-Zranění vzniklá na základě autonehody, střelná zranění a hluboké řezné rány je třeba nechat ošetřit lékařem.</p>
+<p>-V případě nepřítomnosti (hráčů) doktorů na serveru je nutné si po respawnu na EMS zaRPit místního doktora.</p>
+<p>-Hráč je povinen v případě bodného nebo střelného zranění podstoupit vyšetření v nemocnici a následné povolání státních složek přes příkaz /911 (a připoutání k lůžku na EMS)</p>
+<p>!!! I přesto, že se hráč nedostal do PK,  jste povinni adekvátně RPit zranění !!!
+ 
+  </div>
+
+<div class="rule-box">
+	<h2>PK │ PLAYER KILL</h2>
+<p>Vaše postava utrpěla zranění a musí se nechat ošetřit kompetentní osobou (Např. EMS, v RP kvalifikovaným hráčem).</p>
+
+<p>Postava si po PK vše pamatuje a pokračuje v hraní. (Nikoliv to, co se děje během PK, ale vše před udělením PK)</p>
+
+<p>RP ztráty paměti je možné v případě, že tím nedojde o snahu vyhýbat se RP situaci (vyhýbání se obvinění, zatčení apod.), hráč by měl vždy mít pádný RP důvod.</p>
+
+<p>Pokud chcete, aby si druhá strana nic nepamatovala musíte to tak taktéž zaerpit (Např. rána do hlavy tupým předmětem, alkohol, zdrogování...)</p>
+<p>Začít vzpomínat si můžete až po 24 hodinách reálného času. (Např. pomalu si vybavovat: barvy aut, obrysy tváře, místa a další.)</p>
+
+<p>V PK je zakázáno spamovat vysílačku a panicbutton.</p>
+
+<p>Mluvení v PK je možné, záleží však na povaze zranění.</p>
+
+<p>Hráč v PK je povinen po zaslání G signálu vyčkat na příjezd EMS.</p>
+</div>
+
+<div class="rule-box">
+<h2>REVENGE KILL</h2>
+<p>Je zakázáno "mstít" se druhé osobně po dobu 24 hodin (reálného času) od obdržení PK.</p> 
+
+<p>Hráč se považuje za zraněného/neschopného se mstít.</p>
+
+<p>Pokud bude však vystaven situaci z opačné strany, má povoleno se bránit.</p>
+
+<p>Pokud je postava schopna se po zotavení mstít, vždy by této situaci mělo předcházet RP</p>
+
+<p>Pomsta nikdy nesmí proběhnout jako KOS.</p>
+</div>
+<div class="rule-box">
+<h2>CK │ CHARAKTER KILL</h2>
+<br>
+<p>Definitivní smrt postavy.</p>
+
+<p>Každé CK musí být předem schváleno AT (výjimkou je situační CK) pomocí ticketu na našem discordu.</p>
+
+<p>Po provedení CK musí být oznámeno v LOOC: "CK – jméno postavy - OOC nick daného hráče”, aby CK bylo platné.</p>
+
+<p>Po provedení CK je nutné nahlásit do příslušného ticketu místo činu, způsob zabití/příčina smrti, zda se s tělem nějak manipulovalo. </p>
+
+<p>Po CK je zakázán návrat do stejné frakce, se kterou spolupracovala původní postava hráče, po dobu 7 dní. Běžná interakce s frakcí je povolena, nikoliv však cokoliv ilegálního (ani jako externí spolupracovník!).</p>
+
+<p>Je zakázáno, aby se hráč po CK, se vrátil s novou postavou, která má jakoukoliv vazbu na jeho předešlou postavu (příbuzenství, známost). Jedná o nepovolený metagaming. Avšak AT může v některých případech udělit výjimku.</p>
+
+<p>Druhy CK:</p>
+<br>
+<p>CK</p>
+<p>- Žádost o CK pro jinou postavu je třeba vždy podložit dostatečným RP důvodem a dlouhodobým RP.</p>
+<p>- Poškozený hráč se proti CK může odvolat v případě že má pocit že mu CK bylo uděleno neprávem.</p>
+<p>- Pokud chcete udělit CK na člena AT musíte napsat do soukromých zpráv nezávislým členům AT.</p>
+
+<p>SelfCK</p>
+<p>- V případě, že chcete CK udělit vlastní postavě, musíte si nechat schválit SelfCK od AT. </p>
+
+<p>SituačníCK</p>
+<p>- Lze udělit pouze v případě že k tomu má hráč dostatečný RP důvod</p>. 
+<p>- (např. když jste svědkem vraždy osoby vám blízké atd.)</p>
+<p>- Pro udělení situačního CK je nutné oznámit akci reportem a zároveň požádat o spectate celé situace. Po udělení CK si vypsat ticket a vyplnit všechny náležitosti a podrobně uvést všechny důvody pro CK. </p>
+<p>(V případě nedostatečného důvodu může být CK skipnuto..)</p>
+
+<p>Frakční CK</p>
+<p>- Uděluje boss frakce, členům své frakce</p>
+<p>- Není třeba schválení ticketem</p>
+
+<p>JailCK</p>
+<p>Trest odnětí svobody na doživotí je považováno za CK postavy.</p>
+</div>
+
+<div class="rule-box">
+<h2>Gross RP</h2>
+<p>Nechutný či drsný styl RP v podobě slovní, písemné nebo za použití animace.</p>
+
+<p>Pokud chcete RPit GrossRP, musíte se zeptat v OOC chatu na povolení od všech přítomných hráčů. Pokud tak neučiníte je GrossRP přísně zakázáno.</p>
+
+<p>GrossRP se může kdykoliv zrušit nebo zmírnit v OOC chatu.</p>
+
+<p>Je zakázáno hráče mučit způsobem, který by na nich zanechal trvale viditelné následky, které se nedají znázornit mechanikou hry (např. uřezávat končetiny, vyřezávat nápisy/ornamenty atd).</p>
+
+<p>Nikdy nesmí být neschválení Gross RP podmětem k vyhýbání se RP. Pokud se jedná o "mučení", nesmí oběť nějak pozastavovat hru ani v případě, že neschválíte Gross RP. To neznamená, že rp nebude pokračovat. Pokud máte pocit, že je jejich rp neoprávněné, můžete si podat po doerpení situace ticket.</p>
+
+<p>Výjimkou je znásilnění - pokud je zamítnuto, zůstává zamítnutým a nelze v něm pokračovat žádnou formou.</p>
+  </div>
+  <div class="rule-box">
+  <h2>FEAR</h2>
+ <p> Znázornění strachu z dané situace. </p>
+
+<p>Hráči jsou povinni brát v potaz, že se jejich postava bojí o svůj život.</p> 
+<p>Je třeba si uvědomit, že se toto pravidlo vztahuje i na situace, kdy vystavíte jiného blízkého člověka nebezpečí ohrožení na životě.</p>
+<p>(Např. situace, kde na osobu míří 2 lidé a chtějí ho okrást. V danou chvíli si nebude hrát na hrdinu a bude spolupracovat kvůli strachu ze ztráty života.)</p>
+
+<p>Druhy FearRP :</p>
+
+<p>JailFear - Strach z toho, že se dostanete do vězení.</p>
+
+<p>GunFear - Strach ze střelných zbraní.</p>
+
+<p>AnimalFear - Strach ze zvířat, které vás mohou pokousat či hůř. (Např. neznámý pes na ulici)</p>
+
+<p>JobFear - Strach ze ztráty práce.</p>
+
+<p>CopFear - Hráči by měli mít respekt ze státních složek jako jsou LSPD, LSSD apod..</p>
+  </div>
+  
+    <div class="rule-box">
+    <h2>NVL │ NOT VALUING YOUR LIFE</h2>
+    <p>Nevážení si svého života.</p>
+    <p>Hráči jsou povinni bát se o svůj život i o životy svých blízkých.</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>POWERGAMING</h2>
+    <p>Nereálné úkony, které nejsou v reálném světě možné.</p>
+    <p>(Např. “/me bere auto do rukou a hází ho před sebe”.)</p>
+    <p>Počítá se i zneužívání animací (např. /e clown5 a další).</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>FAIL RP / TRASH RP</h2>
+    <p>Je zakázáno na serveru jakkoliv trollit nebo kazit RP (Např. bezdůvodné napadání a nadávání hráčům).</p>
+    <p>Je zakázáno používat známá jména postav z her, filmů nebo jména známých osobností.</p>
+    <p>Je zakázáno RPit nelegální PD, FD a EMS (korupce) bez schválení AT.</p>
+    <p>Při nošení hráče pomocí příkazu /carry a /donaruci je povinností hráče danou situaci RPit i pomocí /me a /do. Samostatné použití příkazu je bráno jako Fail RP.</p>
+    <p>Použití motorek, offroad bugin a lodí pro nelegální činnosti (banky, klenotnictví, obchody, atp.) je bráno jako Fail RP. Vyjímka:</p>
+    <ul>
+      <li>použití pro nelegální činnosti, které se již od počátku odehrávají v offroadu</li>
+      <li>použití jako sekundární vozidlo v případě předpřípravy na místě dostatečně vzdáleném od místa provedení neleg. činnosti</li>
+    </ul>
+    <p>Je zakázáno cíleně kempit a okrádat jiné hráče na místech unikátních skriptů jako (Např. u NPC joby atd.)</p>
+    <p><b>!!! Zákaz zneužívání a bugování animací ku vlastnímu prospěchu !!!</b></p>
+  </div>
+
+  <div class="rule-box">
+    <h2>POZNÁVÁNÍ HRÁČŮ</h2>
+    <p>Je zakázáno poznávání hráčů dle hlasu, oblečení či vzhledu, pokud jste s daným hráčem neměli dostatečnou interakci.</p>
+    <p>Jako dostatečná interakce je považován vztah postav (rodina, milenec, partner, kolega, apod.) nebo dlouhodobé RP mezi postavami.</p>
+  </div>
+
+  <div class="rule-box">
+    <h2>PRAVIDLO INVENTÁŘE</h2>
+    <p>Vše co máte v inventáři postavy, máte u sebe.</p>
+    <p>V případě prohledávání jiným hráčem není nutné prohledávání skrz inventář, je možné využít příkazy /me a /do. Při prohledávání jiným hráčem je možné se zeptat, kde všude vás osoba prohledává pomocí /do.</p>
+    <p>Hráč by u sebe měl vždy nosit reálné množství např. peněz, jídla atd., které je schopen unést.</p>
+  </div>
+ <div class="rule-box">
+ <h2>PUSSY HUNTING</h2>
+ <p>Je zakázáno cílené "nahánění" žen v RP. (vynucená interakce, pravidelné únosy...) </p>
+  </div>
+  <div class="rule-box">
+    <h2>FRAKCE</h2>
+    <p>= Seskupení hráčů se stejným herním cílem.</p>
+    <p>(Např. firma, klan, klub, provozovna služeb, skupina provozující nelegální činnosti apod.)</p>
+    <p>O frakci si lze zažádat formou ticketu.</p>
+    <p>Ticket podává potencionální vůdce frakce.</p>
+    <p>Potřebné informace:</p>
+    <ol>
+      <li>Název frakce</li>
+      <li>Typ frakce (Legální/Neutrální/Nelegální)</li>
+      <li>Věk žadatele</li>
+      <li>Počet lidí do začátku</li>
+      <li>Lore frakce (historie, popis, zaměření, hierarchie, cíl)</li>
+      <li>Lore postavy žadatele</li>
+      <li>Seznam členů do začátku</li>
+    </ol>
+    <p>Vedení frakce po založení musí zaslat IC informace do Discord ticketu…</p>
+    <!-- pokračuj se Strike systém, pravidla státních složek -->
+  </div>
+
+</div>
+
+<footer>
+  CrimeRP © 2026
+</footer>
+
+</body>
+</html>
