@@ -7,12 +7,12 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #000000; /* černé pozadí */
+  background-color: #000000;
   color: #ffffff;
   line-height: 1.6;
 }
 
-/* ----------------------------- Horní lišta / Header ----------------------------- */
+/* ----------------------------- Header ----------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,26 +23,18 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 140px; /* pevná výška headeru */
 }
 
 /* ----------------------------- Logo ----------------------------- */
 .logo {
-  display: flex;
-  align-items: center;
+  position: relative;
+  z-index: 200; /* logo vždy v popředí */
 }
 
 .logo img {
-  height: 110px;
+  height: 130px; /* větší než dřív */
   width: auto;
-  margin-right: 20px;
-}
-.ron-character {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 70vh; 
-  pointer-events: none;
-  z-index: 9999;
 }
 
 /* ----------------------------- Navigace ----------------------------- */
@@ -50,6 +42,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 20px;
+  z-index: 150; /* nad obsahem */
+  position: relative;
 }
 
 nav a, .dropbtn {
@@ -72,7 +66,7 @@ nav a:hover, .dropbtn:hover {
   color: #ff0000;
 }
 
-/* ----------------------------- Dropdown menu ----------------------------- */
+/* ----------------------------- Dropdown ----------------------------- */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -86,7 +80,7 @@ nav a:hover, .dropbtn:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
-  z-index: 50;
+  z-index: 101; /* nad containerem, pod ron */
 }
 
 .dropdown-content a {
@@ -101,12 +95,35 @@ nav a:hover, .dropbtn:hover {
   color: #ffffff;
 }
 
+/* Hover desktop */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Klik mobil */
 .dropdown.active .dropdown-content {
   display: block;
 }
 
-/* ----------------------------- Boxy pravidel ----------------------------- */
-.rule-box {
+/* ----------------------------- Ron postava ----------------------------- */
+.ron-character {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 70vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ----------------------------- Obsah stránek ----------------------------- */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative; /* stacking context pro dropdown */
+}
+
+.rule-box, .faq-box {
   background-color: #1a1a1a;
   border: 1px solid #333333;
   padding: 20px;
@@ -114,22 +131,15 @@ nav a:hover, .dropbtn:hover {
   border-radius: 6px;
 }
 
-.rule-box h2 {
+.rule-box h2, .faq-box h2 {
   color: #ff0000;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-.rule-box p, .rule-box li {
+.rule-box p, .rule-box li, .faq-box p {
   color: #ffffff;
   line-height: 1.5;
-}
-
-/* ----------------------------- Obsah stránky ----------------------------- */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
 }
 
 /* ----------------------------- Footer ----------------------------- */
@@ -153,4 +163,11 @@ footer {
     position: static;
   }
 
+  .logo img {
+    height: 100px;
+  }
+
+  header {
+    height: 120px;
+  }
 }
