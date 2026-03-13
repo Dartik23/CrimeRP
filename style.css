@@ -36,6 +36,13 @@ header {
   width: auto;
   margin-right: 20px;
 }
+.ron-character {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 70vh; 
+  pointer-events: none;
+}
 
 /* ----------------------------- Navigace ----------------------------- */
 nav {
