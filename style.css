@@ -1,8 +1,4 @@
-/* =========================================================
-   RESET
-   základní nastavení pro celý web
-========================================================= */
-
+/* ----------------------------- Reset a základ ----------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,292 +12,177 @@ body {
   line-height: 1.6;
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
-
+/* ----------------------------- Horní lišta / Header ----------------------------- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 10px 40px;
-
   background-color: #111111;
   border-bottom: 2px solid #333333;
-
   position: sticky;
   top: 0;
-
-  height: 130px;
-
-  /* header je pod textem ale nad pozadím */
   z-index: 5;
+  height: 120px; /* pevná výška headeru */
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
-
+/* ----------------------------- Logo ----------------------------- */
 .logo {
+  display: flex;
+  align-items: center;
   position: relative;
-  z-index: 50; /* logo je vždy nad vším */
+  z-index: 50; /* logo nad vším */
 }
 
 .logo img {
-
-  /* velikost loga */
-  height: 170px;
-
+  height: 150px; /* větší logo */
   width: auto;
-
-  /* posunutí aby nepřekáželo v headeru */
   position: relative;
-  top: 15px;
+  top: 10px; /* posunutí dolů aby nepřekáželo */
+  margin-right: 20px;
 }
-
 
 /*
 POZNÁMKA:
-
-Pokud bude logo moc velké nebo malé,
-stačí změnit hodnotu height.
-
-např:
-
+Pokud bude logo moc velké změň
 height:150px
-height:200px
+např na
+height:130px nebo 170px
 */
 
+/* ----------------------------- Postava (Ron) ----------------------------- */
+.ron-character {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 70vh;
+  pointer-events: none;
 
-/* =========================================================
-   NAVIGACE
-========================================================= */
+  /*
+  Z-index:
+  header/footer = 5
+  ron = 10
+  text = 20+
+  */
 
+  z-index: 10;
+}
+
+/*
+POZNÁMKA DO BUDOUCNA:
+
+Na každé stránce můžeš použít jinou postavu:
+
+<img src="assets/ron.png" class="ron-character">
+<img src="assets/policista.png" class="ron-character">
+<img src="assets/gangster.png" class="ron-character">
+*/
+
+/* ----------------------------- Navigace ----------------------------- */
 nav {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-nav a,
-.dropbtn {
-
+nav a, .dropbtn {
   color: #ffffff;
   text-decoration: none;
-
   padding: 8px 15px;
-
   border-radius: 4px;
-
+  transition: background 0.2s, color 0.2s;
   font-size: 16px;
   font-weight: 600;
-
+  letter-spacing: 0.5px;
   border: none;
   background: none;
-
+  outline: none;
   cursor: pointer;
-
-  transition: 0.2s;
 }
 
-nav a:hover,
-.dropbtn:hover {
+nav a:hover, .dropbtn:hover {
+  background-color: #111111;
   color: #ff0000;
 }
 
-
-/* =========================================================
-   DROPDOWN MENU
-========================================================= */
-
+/* ----------------------------- Dropdown menu ----------------------------- */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
-
   display: none;
-
   position: absolute;
-
   background-color: #111111;
-
   min-width: 180px;
-
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
   border-radius: 6px;
-
   overflow: hidden;
-
   z-index: 30;
 }
 
 .dropdown-content a {
-
   color: #ffffff;
-
   padding: 12px 16px;
-
+  text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
   background-color: #ff0000;
+  color: #ffffff;
 }
 
-
-/* dropdown se otevře při hover */
-
+/* dropdown hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-
-/* =========================================================
-   HLAVNÍ OBSAH
-========================================================= */
-
-.container {
-
-  max-width: 900px;
-
-  margin: 40px auto;
-
-  padding: 20px;
-
-  position: relative;
-
-  /* obsah je nad postavou */
-  z-index: 40;
-}
-
-
-/* =========================================================
-   BOX PRO PRAVIDLA / FAQ
-========================================================= */
-
-.rule-box,
-.faq-box {
-
+/* ----------------------------- Boxy pravidel ----------------------------- */
+.rule-box {
   background-color: #1a1a1a;
-
   border: 1px solid #333333;
-
   padding: 20px;
-
   margin-bottom: 20px;
-
   border-radius: 6px;
-
   position: relative;
-
-  z-index: 40;
+  z-index: 20; /* text nad ronem */
 }
 
-.rule-box h2,
-.faq-box h2 {
-
+.rule-box h2 {
   color: #ff0000;
-
   margin-bottom: 10px;
-
   font-size: 18px;
 }
 
-.rule-box p,
-.rule-box li,
-.faq-box p {
-
+.rule-box p, .rule-box li {
+  color: #ffffff;
   line-height: 1.5;
 }
 
-
-
-/* =========================================================
-   POSTAVA (RON)
-========================================================= */
-
-/*
-Tady se nastavuje postava na stránce.
-
-Momentálně používáš:
-
-assets/ron.png
-
-Ale můžeš na jiné stránce použít jinou postavu.
-*/
-
-.character {
-
-  position: fixed;
-
-  bottom: 0;
-  right: 0;
-
-  height: 70vh;
-
-  pointer-events: none;
-
-  /* postava je nad header/footer ale pod textem */
-  z-index: 10;
+/* ----------------------------- Obsah stránky ----------------------------- */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  z-index: 20;
 }
 
-
-/*
-POZNÁMKA DO BUDOUCNA
-
-Na každé stránce můžeš dát jinou postavu.
-
-Například:
-
-<img src="assets/ron.png" class="character">
-
-nebo
-
-<img src="assets/policista.png" class="character">
-
-nebo
-
-<img src="assets/gangster.png" class="character">
-*/
-
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
+/* ----------------------------- Footer ----------------------------- */
 footer {
-
   text-align: center;
-
   padding: 30px;
-
   border-top: 2px solid #333333;
-
   margin-top: 40px;
-
   font-size: 14px;
-
   color: #888888;
-
   position: relative;
-
   z-index: 5;
 }
 
-
-
-/* =========================================================
-   RESPONSIVITA (MOBIL)
-========================================================= */
-
+/* ----------------------------- Responsivita ----------------------------- */
 @media screen and (max-width: 768px) {
 
   nav {
@@ -314,14 +195,14 @@ footer {
   }
 
   header {
-    height: 110px;
+    height: 100px;
   }
 
   .logo img {
     height: 120px;
   }
 
-  .character {
+  .ron-character {
     height: 50vh;
   }
 
